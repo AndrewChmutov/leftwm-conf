@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "UnloadTheme" > $XDG_RUNTIME_DIR/leftwm/command-0.pipe
+pkill polybar
