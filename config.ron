@@ -62,9 +62,9 @@
     focus_on_activation: MarkUrgent,
     window_hiding_strategy: MoveOnly,
     keybind: [
-        (command: Execute, value: "pactl -- set-sink-volume @DEFAULT_SINK@ -10%", modifier: [], key: "XF86AudioLowerVolume"),
-        (command: Execute, value: "pactl -- set-sink-volume @DEFAULT_SINK@ +10%", modifier: [], key: "XF86AudioRaiseVolume"),
-        (command: Execute, value: "pactl set-sink-mute @DEFAULT_SINK@ toggle", modifier: [], key: "XF86AudioMute"),
+        (command: Execute, value: "pamixer -d 10", modifier: [], key: "XF86AudioLowerVolume"),
+        (command: Execute, value: "pamixer -i 10", modifier: [], key: "XF86AudioRaiseVolume"),
+        (command: Execute, value: "pamixer -t", modifier: [], key: "XF86AudioMute"),
         (command: Execute, value: "xbacklight -dec 10", modifier: [], key: "XF86MonBrightnessDown"),
         (command: Execute, value: "xbacklight -inc 10", modifier: [], key: "XF86MonBrightnessUp"),
         (command: IncreaseMainSize, value: "1", modifier: ["modkey"], key: "l"),

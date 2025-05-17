@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Getting the data and initializing an array.
 BATTERY_INFO=($( acpi | awk -F',' '{ print $0 }'))
